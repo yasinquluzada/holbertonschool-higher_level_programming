@@ -1,16 +1,21 @@
 #!/usr/bin/python3
 from sys import argv
+
+
 def main():
+    """Print the number of and list of arguments."""
     count = len(argv) - 1
+
     if count == 0:
-        print("0  arguments.")
-        
+        print("0 arguments.")
     elif count == 1:
-        print("1: argument")
+        print("1 argument:")
     else:
         print("{} arguments:".format(count))
-    for i in range(2, count + 1):
+
+    for i in range(1, count + 1):
         print("{}: {}".format(i, argv[i]))
-        
+
+
 if __name__ == "__main__":
     main()
