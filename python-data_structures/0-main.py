@@ -1,12 +1,5 @@
 #!/usr/bin/python3
-"""Module that defines print_list_integer function."""
+print_list_integer = __import__('0-print_list_integer').print_list_integer
 
-
-def print_list_integer(my_list=[]):
-    """Prints all integers of a list, one per line.
-
-    Args:
-        my_list (list): List of integers.
-    """
-    for number in my_list:
-        print("{:d}".format(number))
+my_list = [1, 2, 3, 4, 5]
+print_list_integer(my_list)
