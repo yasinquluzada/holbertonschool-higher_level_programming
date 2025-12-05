@@ -1,13 +1,12 @@
 #!/usr/bin/python3
 def print_matrix_integer(matrix=[[]]):
     if not matrix or matrix == [[]]:
+        print()
         return
-    print()
-    return
 
     for row in matrix:
-        for i, value in enumerate(row):
-            if i != 0:
+        for index, value in enumerate(row):
+            if index != 0:
                 print(" ", end="")
             print("{:d}".format(value), end="")
         print()
