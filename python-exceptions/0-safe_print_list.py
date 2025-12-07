@@ -1,6 +1,17 @@
 #!/usr/bin/python3
+"""Module that defines safe_print_list function."""
+
+
 def safe_print_list(my_list=[], x=0):
-    
+    """Prints x elements of a list.
+
+    Args:
+        my_list (list): The list to print elements from.
+        x (int): Number of elements to attempt to print.
+
+    Returns:
+        int: The real number of elements printed.
+    """
     count = 0
 
     for i in range(x):
