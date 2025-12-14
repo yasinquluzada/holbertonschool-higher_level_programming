@@ -1,3 +1,3 @@
-# Python - More Classes
+# Python - More Classes and Objects
 
-This directory contains tasks related to building Python classes, focusing on OOP concepts such as attributes, methods, special methods, and class attributes.
+This directory contains tasks for practicing Python classes, including the Rectangle class with custom string representations.
