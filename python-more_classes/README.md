@@ -1,3 +1,4 @@
-# Python - More Classes and Objects
+# python-more_classes
 
-This directory contains tasks for practicing Python classes, including the Rectangle class with custom string representations.
+Task 9: Implement a `Rectangle` class (9-rectangle.py) with validated width/height, instance counting,
+string representations, comparison helper, and a `square` constructor.
