@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""Defines a Rectangle class with tracked instances and custom representations."""
+"""Defines a Rectangle class with instance tracking and representations."""
 
 
 class Rectangle:
@@ -47,7 +47,7 @@ class Rectangle:
         return self.__width * self.__height
 
     def perimeter(self):
-        """Return the perimeter of the rectangle, or 0 if width or height is 0."""
+        """Return the perimeter, or 0 if width or height is 0."""
         if self.__width == 0 or self.__height == 0:
             return 0
         return 2 * (self.__width + self.__height)
@@ -57,13 +57,14 @@ class Rectangle:
         if self.__width == 0 or self.__height == 0:
             return ""
         symbol = str(self.print_symbol)
-        return "\n".join(symbol * self.__width for _ in range(self.__height))
+        rows = (symbol * self.__width for _ in range(self.__height))
+        return "\n".join(rows)
 
     def __repr__(self):
         """Return the official string representation to recreate the instance."""
         return "Rectangle({}, {})".format(self.__width, self.__height)
 
     def __del__(self):
-        """Print deletion message and decrement instance counter."""
+        """Print deletion message and decrement the instance counter."""
         Rectangle.number_of_instances -= 1
         print("Bye rectangle...")
