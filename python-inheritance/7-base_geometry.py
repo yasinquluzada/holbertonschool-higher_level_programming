@@ -1,17 +1,17 @@
 #!/usr/bin/python3
-"""Defines BaseGeometry with an unimplemented area and strict integer validation."""
+"""Defines BaseGeometry with strict integer validation."""
 
 
 class BaseGeometry:
-    """Provides basic geometry behaviors and input validation utilities."""
+    """Provides geometry behaviors and strict input validation utilities."""
 
     def area(self):
-        """Raises an exception because the area behavior is not implemented."""
+        """Raises an exception because area is not implemented."""
         raise Exception("area() is not implemented")
 
     def integer_validator(self, name, value):
         """Validates that value is an integer greater than zero."""
-        if type(value) != int:
-            raise TypeError(f"{name} must be an integer")
+        if type(value) is not int:
+            raise TypeError("{} must be an integer".format(name))
         if value <= 0:
-            raise ValueError(f"{name} must be greater than 0")
+            raise ValueError("{} must be greater than 0".format(name))
