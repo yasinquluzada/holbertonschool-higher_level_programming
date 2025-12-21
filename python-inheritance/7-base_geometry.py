@@ -1,9 +1,9 @@
 #!/usr/bin/python3
-"""Defines BaseGeometry with strict integer validation."""
+"""Defines BaseGeometry with an unimplemented area and strict integer validation."""
 
 
 class BaseGeometry:
-    """Provides geometry behaviors and strict input validation utilities."""
+    """Provides base geometry behaviors and strict input validation."""
 
     def area(self):
         """Raises an exception because area is not implemented."""
