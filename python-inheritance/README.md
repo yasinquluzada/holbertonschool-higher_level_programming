@@ -1,3 +1,2 @@
-# Python - Inheritance
-
-This project contains tasks that practice Python inheritance, introspection, and basic OOP behaviors.
+#!/usr/bin/python3
+Python Inheritance project tasks.
