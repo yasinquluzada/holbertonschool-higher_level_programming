@@ -1,5 +1,6 @@
 >>> BaseGeometry = __import__('7-base_geometry').BaseGeometry
 >>> bg = BaseGeometry()
+
 >>> try:
 ...     bg.area()
 ... except Exception as e:
@@ -9,26 +10,26 @@ area() is not implemented
 >>> bg.integer_validator("my_int", 12)
 >>> bg.integer_validator("width", 89)
 
->>> try:
-...     bg.integer_validator()
-... except Exception as e:
-...     print(e.__class__.__name__)
-TypeError
-
->>> try:
-...     bg.integer_validator("age")
-... except Exception as e:
-...     print(e.__class__.__name__)
-TypeError
-
->>> try:
-...     bg.integer_validator("name", "John")
-... except Exception as e:
-...     print("[{}] {}".format(e.__class__.__name__, e))
-[TypeError] name must be an integer
+>>> for bad in ((4,), [3], True, {3, 4}, None, "4"):
+...     try:
+...         bg.integer_validator("age", bad)
+...     except Exception as e:
+...         print("[{}] {}".format(e.__class__.__name__, e))
+[TypeError] age must be an integer
+[TypeError] age must be an integer
+[TypeError] age must be an integer
+[TypeError] age must be an integer
+[TypeError] age must be an integer
+[TypeError] age must be an integer
 
 >>> try:
 ...     bg.integer_validator("age", 0)
+... except Exception as e:
+...     print("[{}] {}".format(e.__class__.__name__, e))
+[ValueError] age must be greater than 0
+
+>>> try:
+...     bg.integer_validator("age", -4)
 ... except Exception as e:
 ...     print("[{}] {}".format(e.__class__.__name__, e))
 [ValueError] age must be greater than 0
