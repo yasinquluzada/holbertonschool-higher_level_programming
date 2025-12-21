@@ -7,7 +7,7 @@ class Rectangle(BaseGeometry):
     """Represents a rectangle validated by BaseGeometry integer_validator."""
 
     def __init__(self, width, height):
-        """Initializes a Rectangle with validated positive integer width and height."""
+        """Initializes a Rectangle with validated positive integer dimensions."""
         self.integer_validator("width", width)
         self.integer_validator("height", height)
         self.__width = width
