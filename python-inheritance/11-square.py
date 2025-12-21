@@ -1,14 +1,14 @@
 #!/usr/bin/python3
-"""Defines a Square as a special Rectangle with equal sides."""
+"""Defines a Square that inherits from Rectangle and validates its size."""
 
 Rectangle = __import__('9-rectangle').Rectangle
 
 
 class Square(Rectangle):
-    """Represents a square defined by one validated size value."""
+    """Represents a square with a private validated size value."""
 
     def __init__(self, size):
-        """Initializes the square with validated size."""
+        """Initializes the square with a validated positive integer size."""
         self.integer_validator("size", size)
         self.__size = size
         super().__init__(size, size)
